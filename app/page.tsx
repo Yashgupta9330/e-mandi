@@ -9,6 +9,7 @@ import potato from "../images/potato.jpg"
 import tomato from "../images/tomato.jpg"
 import onion from "../images/onion.jpg"
 import Footer from "@/components/normal/footer";
+import { Navbar } from "@/components/normal/Navbar";
 
 
 export default function Home() {
@@ -38,20 +39,7 @@ export default function Home() {
   
   return (
     <div className="w-full min-h-screen">
-      <header className="bg-green-600 text-white p-4">
-        <div className="flex justify-between items-center px-4">
-          <h1 className="text-2xl font-bold">E-MANDI</h1>
-          <nav>
-            <ul className="flex space-x-4">
-              <li><Link href="/" className="hover:underline">Home</Link></li>
-              <li><Link href="/products" className="hover:underline">Products</Link></li>
-              <li><Link href="/product-listing" className="hover:underline">Add Products</Link></li>
-              <li><Link href="/login" className="hover:underline">Login</Link></li>
-              <li><Link href="/register" className="hover:underline">Register</Link></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+     <Navbar/>
       <section className="hero-section flex justify-between items-center">
         <div className="hero-content mr-4">
           <h1>Connecting Farmers to the Best Market Deals</h1>

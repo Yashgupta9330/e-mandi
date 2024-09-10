@@ -13,6 +13,7 @@ import spinach from "../../images/spinach.jpg"
 import onion from "../../images/onion.jpg"
 import carrot from "../../images/carrot.jpg"
 import Link from 'next/link'
+import { Navbar } from '@/components/normal/Navbar'
 
 // Mock data for vegetables
 const vegetables = [
@@ -42,20 +43,7 @@ export default function Component() {
     return (
         <div className="flex flex-col min-h-screen bg-gray-100">
             {/* Sidebar with filters */}
-            <header className="bg-green-600 text-white p-4">
-                <div className="container mx-auto flex justify-between items-center">
-                    <h1 className="text-2xl font-bold">e-MANDI</h1>
-                    <nav>
-                        <ul className="flex space-x-4">
-                            <li><Link href="/" className="hover:underline">Home</Link></li>
-                            <li><Link href="/products" className="hover:underline">Products</Link></li>
-                            <li><Link href="/product-listing" className="hover:underline">Add Products</Link></li>
-                            <li><Link href="/login" className="hover:underline">Login</Link></li>
-                            <li><Link href="/register" className="hover:underline">Register</Link></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+            <Navbar/>
             <div className='flex'>
             <aside className="w-[400px] bg-white p-6 shadow-md">
                 <h2 className="text-xl font-semibold mb-4">Filters</h2>
@@ -80,7 +68,7 @@ export default function Component() {
                             step={1}
                             value={priceRange}
                             onValueChange={setPriceRange}
-                            className="bg-gray-200 text-green-600"
+                            className="bg-gray-200 text-white"
                         />
 
                         <div className="text-sm text-gray-500 mt-1">
