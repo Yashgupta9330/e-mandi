@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { ChevronDown } from "lucide-react"
 import { Navbar } from "@/components/normal/Navbar"
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
 
 export default function Page() {
   const [userRole, setUserRole] = useState("Select user role")
@@ -23,6 +24,7 @@ export default function Page() {
   ]
 
   return (
+    <GoogleReCaptchaProvider reCaptchaKey="6LdFGj0qAAAAACAz3ZuO577piaZo9dRrjftjDTra">
     <div className="min-h-screen bg-green-50 flex flex-col">
       <Navbar/>
       <main className="flex-grow container mx-auto mt-8 p-4 flex justify-center items-center">
@@ -79,5 +81,6 @@ export default function Page() {
         </div>
       </footer>
     </div>
+    </GoogleReCaptchaProvider>
   )
 }
