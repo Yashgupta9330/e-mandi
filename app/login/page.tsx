@@ -117,7 +117,7 @@ export default function LoginPage() {
         </main>
         <footer className="bg-green-600 text-white p-4 mt-8">
           <div className="container mx-auto text-center">
-            <p>&copy; 2023 e-MANDI. All rights reserved.</p>
+            <p>&copy; 2024 e-MANDI. All rights reserved.</p>
           </div>
         </footer>
       </div>
